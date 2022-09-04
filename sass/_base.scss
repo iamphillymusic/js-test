@@ -1,0 +1,385 @@
+
+//MEDIA
+
+$bp-largest: 84.1em;//1330px
+
+$bp-large: 74.3em; //1150px
+$bp-small: 65.62em; //1050px
+$bp-smallest: 60.3em; //1050px
+$bp-smallest1: 54.7em; //1050px
+$bp-smallest3: 52.2em; //1050px
+
+
+
+$bp-smallest4: 25.5em; //400px
+$bp-smallest2: 20em; //320px
+
+
+//MEDIA F
+$bp-smallestF: 47.5em; //760px
+
+
+
+
+
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+box-sizing: border-box;
+font-size: 62.5%;
+font-family: 'IBM Plex Sans', sans-serif;
+background-color: rgba(240, 237, 237, 0.857);
+position: relative;
+
+
+    @media only screen and  (max-width: $bp-largest) {
+        font-size: 55%;
+    }
+
+    @media only screen and  (max-width: $bp-large) {
+        font-size: 48%;
+    }
+
+    @media only screen and  (max-width: $bp-small) {
+        font-size: 45%;
+    }
+
+    @media only screen and  (max-width: $bp-smallest) {
+        font-size: 40%;
+    }
+    @media only screen and  (max-width: $bp-smallest1) {
+        font-size: 38%;
+    }
+
+    @media only screen and  (max-width: $bp-smallest3) {
+        font-size: 36%;
+    }
+
+    @media only screen and  (max-width: $bp-smallestF) {
+        font-size: 34%;
+    }
+
+    @media only screen and  (max-width: $bp-smallest4) {
+        font-size: 32%;
+    }
+    @media only screen and  (max-width: $bp-smallest2) {
+        font-size: 30%;
+    }
+  
+
+
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    row-gap: 3rem;
+
+}
+.content {
+    grid-column: 1/span3;
+    grid-row: 2/3;
+    margin: 5rem auto;
+
+    display: grid;
+    width: 80vw;
+    gap: 3rem;
+    //grid-template-columns: 40vh 50 30rem; media query phone;
+    // grid-template-columns: 40vh 50 30rem;
+    grid-template-columns: 25rem 55rem 30rem;
+    // grid-template-columns: 40vh 50 30rem;
+    @media only screen and  (max-width: $bp-smallest4) {
+        grid-template-columns: none;
+        margin: 10rem auto;
+
+
+    }
+    
+
+
+    
+
+
+    .side-bar {
+        border: 1px solid rgb(198, 194, 194);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .side-barR {
+        background-color: #fff;
+        height: min-content;
+        display: grid;
+        grid-template-rows: repeat(4, min-content);
+
+        .profile1{
+            display: grid;
+            height: 50%;
+            background-color: rgb(181, 188, 181);
+
+            img{
+                margin-top: 1.5rem;
+                width: 40%;
+                height: 70%;
+                border-radius: 50%;
+                justify-self: center;
+                align-self: end;
+                border:2px solid rgb(233, 228, 228);  
+            }
+
+            p {
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 900;
+                padding: 2rem;
+            }
+        }
+
+        .profile2{
+
+            margin-top: 3rem;
+            padding: 2rem;
+            border-top: 1px solid rgb(233, 228, 228);
+            border-bottom: 1px solid rgb(233, 228, 228);
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: min-content;
+
+
+
+            p{
+                font-weight: 900;
+                font-size: 1.35rem;
+            }
+
+            .light{
+                color: rgb(167, 162, 162);
+            }
+
+            svg{
+                justify-self: end;
+                padding: 0.9rem;
+                height: 4rem;
+                width: 4rem
+            }
+        }
+
+        .premium{
+            font-size: 1.35rem;
+            padding: 1rem;
+
+            &:hover {
+                background-color: #e4e1df;
+            }
+
+            &:hover  .strong{
+                color: blue;   
+            }
+        }
+
+        .profile3 {
+            margin-top: 3rem;
+            color: blue;
+            padding: 2rem;
+            border-top: 1px solid rgb(233, 228, 228);
+            border-bottom: 1px solid rgb(233, 228, 228);   
+            font-weight: 900;
+            font-size: 1.35rem;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            grid-template-rows: min-content;
+            gap: 1.2rem;
+
+        }
+    }
+
+    .newsfeed {
+        background-color: none;
+        display:grid;
+        grid-template-rows: repeat(autofit, minmax(min-content, 1fr));
+        gap: 1rem;
+        border: none;
+
+        .input-box {
+            height: fit-content;
+            background-color: #fff;
+            display: grid;
+            grid-template-rows: repeat(2, min-content);
+            border-radius: 10px;
+            border: 1px solid rgb(191, 185, 185);
+
+
+            .input {
+                display: grid;
+                grid-template-columns: repeat(3, min-content);
+                grid-template-rows: min-content;
+                
+
+                
+
+
+                input{
+            
+                    height: 4rem;
+                    align-self: center;
+                    width: 25vw;
+                    border-radius: 20px;
+                    padding: 1rem;
+                    font-weight: 900;
+                    border: 1px solid black;
+                    @media only screen and  (max-width: $bp-smallest4) {
+                        grid-column: 2/ -1;
+
+                    }
+                    @media only screen and  (max-width: $bp-smallest2) {
+                        min-width: 20vh;
+
+                    }
+                
+
+        
+                }
+                .img{
+                    margin-top: 1.5rem;
+                    width: 5rem;
+                    height: 5rem;
+                    border-radius: 50%;
+                    margin: 2rem;
+                    
+                }
+
+
+            }
+
+            .media{
+                display: grid;
+                grid-template-columns: repeat(4, min-content);
+                grid-template-rows: min-content;
+                gap: 1rem;
+                align-items: center;
+                font-size: 1.4rem;
+                font-weight: 900;
+                
+                &-box {
+                    display: grid;
+                    grid-template-columns: repeat(2, min-content);
+                    align-items: center;
+                    gap: .5rem;
+                    padding: 1rem;
+
+                    svg{
+                        height: 3rem;
+                        width: 4rem;
+                        fill: rgb(131, 131, 227);
+                    }
+
+
+                }
+            }
+
+        }
+
+        .comment{
+            font-size: 1.2rem;
+            overflow: hidden;
+
+            .notify{
+                display: grid;
+                grid-template-columns: repeat(2, max-content);
+                gap: 1rem;
+                padding: .9rem;
+                border-bottom: 1px solid rgb(196, 194, 194);
+            }
+            .feed-head {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(min-content, max-content)) ;
+                margin: 1rem;
+                gap: 1rem;
+                align-items: center;
+                overflow: hidden;
+
+                .img{
+                    height: 4rem;
+                    width: 4rem;
+                }
+                p{
+                    color: rgb(140, 135, 135);
+                }
+                .strong{
+                    justify-self: end;
+                    padding: 2rem;
+                    font-size: 1.6rem;
+                    color: blue;
+                }
+            }
+
+            img{
+                height: fit-content;
+                max-width: 100%;
+
+            }
+    
+
+        }
+
+
+  
+    }
+
+
+    .side-barL {
+        display: grid;
+        background-color: #fff;
+        grid-template-rows: repeat(7, min-content);
+
+        .strong{
+            padding: 2rem;
+            font-size: 1.9rem;
+        }
+
+        .add {
+            display: grid;
+            grid-template-columns: min-content max-content;
+            grid-template-rows: repeat(2, min-content);
+            padding: 2rem;
+            font-size: 1.4rem;
+            gap: .8rem;
+
+            img{
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+            }
+            button {
+                grid-column: 2/3;
+                padding: 1rem;
+                border-radius: 18px;
+                font-size: 1.2rem;
+            }
+            p{
+                color: rgb(170, 167, 167);
+            }
+
+        }
+
+        .success {
+            display:grid;
+            gap: 3rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+
+}
+

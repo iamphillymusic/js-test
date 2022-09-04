@@ -1,0 +1,89 @@
+
+.header{
+    grid-column: 1/span3;
+    grid-row: 1/2;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    border: 1px solid rgb(233, 228, 228);
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 100%));
+    grid-template-rows: repeat(2, min-content);
+
+
+    input {
+        height: 3rem;
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(215, 220, 220);
+        padding: 0 1rem;
+        align-self: start;
+        width: 80%;
+        transition: width 0.5s;
+        margin-top: .8rem;
+
+        @media only screen and  (max-width: $bp-smallest4) {
+            grid-row: 2/3;
+            grid-column: 1/span3;
+            margin:  1.2rem auto;
+        }
+
+        &:focus {
+            width: 100%;
+        }
+    }
+
+    .logo{
+        @media only screen and  (max-width: $bp-smallest4) {
+          justify-self: start;
+        }
+
+        svg{
+            display: grid;
+
+            @media only screen and  (max-width: $bp-smallest4) {
+                display: grid;
+                height: 3rem;
+            }
+
+    }
+    }
+
+    .icon {
+        display: grid;
+        display: flex;
+        grid-column: 3/4;
+        justify-self: end ;
+        width: fit-content;
+
+
+        svg{
+            margin-right: 2rem;
+            width: 3rem;
+            height: 3rem;
+
+        }
+    }
+
+    .grid{
+        justify-self: end ;
+        align-self: center;
+        transition: all 0.4s;
+
+    
+        svg{
+            width: 5rem;
+            height: 5rem;
+            fill: rgb(121, 156, 169);
+
+
+
+            &:active{
+                transform: scale(-0.9)
+            }
+
+        }
+    }
+}

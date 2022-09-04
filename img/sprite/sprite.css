@@ -1,0 +1,21 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-cancel {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.icon-grid {
+  width: 32px;
+  height: 32px;
+  background-position: -108px 0;
+}
+.icon-googleplay {
+  width: 32px;
+  height: 32px;
+  background-position: 0 -108px;
+}
+

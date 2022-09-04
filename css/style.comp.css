@@ -1,0 +1,294 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: rgba(240, 237, 237, 0.857);
+  position: relative; }
+  @media only screen and (max-width: 84.1em) {
+    html {
+      font-size: 55%; } }
+  @media only screen and (max-width: 74.3em) {
+    html {
+      font-size: 48%; } }
+  @media only screen and (max-width: 65.62em) {
+    html {
+      font-size: 45%; } }
+  @media only screen and (max-width: 60.3em) {
+    html {
+      font-size: 40%; } }
+  @media only screen and (max-width: 54.7em) {
+    html {
+      font-size: 38%; } }
+  @media only screen and (max-width: 52.2em) {
+    html {
+      font-size: 36%; } }
+  @media only screen and (max-width: 47.5em) {
+    html {
+      font-size: 34%; } }
+  @media only screen and (max-width: 25.5em) {
+    html {
+      font-size: 32%; } }
+  @media only screen and (max-width: 20em) {
+    html {
+      font-size: 30%; } }
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(3, minmax(min-content, max-content));
+  row-gap: 3rem; }
+
+.content {
+  grid-column: 1/span3;
+  grid-row: 2/3;
+  margin: 5rem auto;
+  display: grid;
+  width: 80vw;
+  gap: 3rem;
+  grid-template-columns: 25rem 55rem 30rem; }
+  @media only screen and (max-width: 25.5em) {
+    .content {
+      grid-template-columns: none;
+      margin: 10rem auto; } }
+  .content .side-bar {
+    border: 1px solid #c6c2c2;
+    border-radius: 10px;
+    overflow: hidden; }
+  .content .side-barR {
+    background-color: #fff;
+    height: min-content;
+    display: grid;
+    grid-template-rows: repeat(4, min-content); }
+    .content .side-barR .profile1 {
+      display: grid;
+      height: 50%;
+      background-color: #b5bcb5; }
+      .content .side-barR .profile1 img {
+        margin-top: 1.5rem;
+        width: 40%;
+        height: 70%;
+        border-radius: 50%;
+        justify-self: center;
+        align-self: end;
+        border: 2px solid #e9e4e4; }
+      .content .side-barR .profile1 p {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 900;
+        padding: 2rem; }
+    .content .side-barR .profile2 {
+      margin-top: 3rem;
+      padding: 2rem;
+      border-top: 1px solid #e9e4e4;
+      border-bottom: 1px solid #e9e4e4;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: min-content; }
+      .content .side-barR .profile2 p {
+        font-weight: 900;
+        font-size: 1.35rem; }
+      .content .side-barR .profile2 .light {
+        color: #a7a2a2; }
+      .content .side-barR .profile2 svg {
+        justify-self: end;
+        padding: 0.9rem;
+        height: 4rem;
+        width: 4rem; }
+    .content .side-barR .premium {
+      font-size: 1.35rem;
+      padding: 1rem; }
+      .content .side-barR .premium:hover {
+        background-color: #e4e1df; }
+      .content .side-barR .premium:hover .strong {
+        color: blue; }
+    .content .side-barR .profile3 {
+      margin-top: 3rem;
+      color: blue;
+      padding: 2rem;
+      border-top: 1px solid #e9e4e4;
+      border-bottom: 1px solid #e9e4e4;
+      font-weight: 900;
+      font-size: 1.35rem;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: min-content;
+      gap: 1.2rem; }
+  .content .newsfeed {
+    background-color: none;
+    display: grid;
+    grid-template-rows: repeat(autofit, minmax(min-content, 1fr));
+    gap: 1rem;
+    border: none; }
+    .content .newsfeed .input-box {
+      height: fit-content;
+      background-color: #fff;
+      display: grid;
+      grid-template-rows: repeat(2, min-content);
+      border-radius: 10px;
+      border: 1px solid #bfb9b9; }
+      .content .newsfeed .input-box .input {
+        display: grid;
+        grid-template-columns: repeat(3, min-content);
+        grid-template-rows: min-content; }
+        .content .newsfeed .input-box .input input {
+          height: 4rem;
+          align-self: center;
+          width: 25vw;
+          border-radius: 20px;
+          padding: 1rem;
+          font-weight: 900;
+          border: 1px solid black; }
+          @media only screen and (max-width: 25.5em) {
+            .content .newsfeed .input-box .input input {
+              grid-column: 2/ -1; } }
+          @media only screen and (max-width: 20em) {
+            .content .newsfeed .input-box .input input {
+              min-width: 20vh; } }
+        .content .newsfeed .input-box .input .img {
+          margin-top: 1.5rem;
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          margin: 2rem; }
+      .content .newsfeed .input-box .media {
+        display: grid;
+        grid-template-columns: repeat(4, min-content);
+        grid-template-rows: min-content;
+        gap: 1rem;
+        align-items: center;
+        font-size: 1.4rem;
+        font-weight: 900; }
+        .content .newsfeed .input-box .media-box {
+          display: grid;
+          grid-template-columns: repeat(2, min-content);
+          align-items: center;
+          gap: .5rem;
+          padding: 1rem; }
+          .content .newsfeed .input-box .media-box svg {
+            height: 3rem;
+            width: 4rem;
+            fill: #8383e3; }
+    .content .newsfeed .comment {
+      font-size: 1.2rem;
+      overflow: hidden; }
+      .content .newsfeed .comment .notify {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 1rem;
+        padding: .9rem;
+        border-bottom: 1px solid #c4c2c2; }
+      .content .newsfeed .comment .feed-head {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, max-content));
+        margin: 1rem;
+        gap: 1rem;
+        align-items: center;
+        overflow: hidden; }
+        .content .newsfeed .comment .feed-head .img {
+          height: 4rem;
+          width: 4rem; }
+        .content .newsfeed .comment .feed-head p {
+          color: #8c8787; }
+        .content .newsfeed .comment .feed-head .strong {
+          justify-self: end;
+          padding: 2rem;
+          font-size: 1.6rem;
+          color: blue; }
+      .content .newsfeed .comment img {
+        height: fit-content;
+        max-width: 100%; }
+  .content .side-barL {
+    display: grid;
+    background-color: #fff;
+    grid-template-rows: repeat(7, min-content); }
+    .content .side-barL .strong {
+      padding: 2rem;
+      font-size: 1.9rem; }
+    .content .side-barL .add {
+      display: grid;
+      grid-template-columns: min-content max-content;
+      grid-template-rows: repeat(2, min-content);
+      padding: 2rem;
+      font-size: 1.4rem;
+      gap: .8rem; }
+      .content .side-barL .add img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%; }
+      .content .side-barL .add button {
+        grid-column: 2/3;
+        padding: 1rem;
+        border-radius: 18px;
+        font-size: 1.2rem; }
+      .content .side-barL .add p {
+        color: #aaa7a7; }
+    .content .side-barL .success {
+      display: grid;
+      gap: 3rem; }
+      .content .side-barL .success img {
+        width: 100%; }
+
+.header {
+  grid-column: 1/span3;
+  grid-row: 1/2;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  border: 1px solid #e9e4e4;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(min-content, 100%));
+  grid-template-rows: repeat(2, min-content); }
+  .header input {
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #d7dcdc;
+    padding: 0 1rem;
+    align-self: start;
+    width: 80%;
+    transition: width 0.5s;
+    margin-top: .8rem; }
+    @media only screen and (max-width: 25.5em) {
+      .header input {
+        grid-row: 2/3;
+        grid-column: 1/span3;
+        margin: 1.2rem auto; } }
+    .header input:focus {
+      width: 100%; }
+  @media only screen and (max-width: 25.5em) {
+    .header .logo {
+      justify-self: start; } }
+  .header .logo svg {
+    display: grid; }
+    @media only screen and (max-width: 25.5em) {
+      .header .logo svg {
+        display: grid;
+        height: 3rem; } }
+  .header .icon {
+    display: grid;
+    display: flex;
+    grid-column: 3/4;
+    justify-self: end;
+    width: fit-content; }
+    .header .icon svg {
+      margin-right: 2rem;
+      width: 3rem;
+      height: 3rem; }
+  .header .grid {
+    justify-self: end;
+    align-self: center;
+    transition: all 0.4s; }
+    .header .grid svg {
+      width: 5rem;
+      height: 5rem;
+      fill: #799ca9; }
+      .header .grid svg:active {
+        transform: scale(-0.9); }
